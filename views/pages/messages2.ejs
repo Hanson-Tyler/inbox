@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+	table, th, td {
+   		border: 1px solid black;
+    	border-collapse: collapse;
+	}
+	th, td {
+    	padding: 5px;
+    	text-align: left;    
+	}
+</style>
+
+</head>
+<body >
+<h1>Sent from first user</h1>
+<table id="inboxMessages">
+	<tr>
+		<th>Sender:</th>
+		<th>Recipient:</th>
+		<th>Subject:</th>
+		<th>Message:</th>
+		<th>Time Sent:</th>
+	</tr>
+
+	<% for (var i = 0; i < data.length; i++) { %>
+    <tr>
+      <td><%= data[i].sender %></td>
+      <td><%= data[i].recipient %></td>
+      <td><%= data[i].subject %></td>
+      <td><%= data[i].message %></td>
+      <td><%= data[i].senddate %></td>
+    </tr>    
+  <% } %>
+</table>
+
+<h1>Sent from second user</h1>
+<table id="inboxMessages2">
+	<tr>
+		<th>Sender:</th>
+		<th>Recipient:</th>
+		<th>Subject:</th>
+		<th>Message:</th>
+		<th>Time Sent:</th>
+	</tr>
+
+	<% for (var i = 0; i < data2.length; i++) { %>
+    <tr>
+      <td><%= data2[i].sender %></td>
+      <td><%= data2[i].recipient %></td>
+      <td><%= data2[i].subject %></td>
+      <td><%= data2[i].message %></td>
+      <td><%= data2[i].senddate %></td>
+    </tr>    
+  <% } %>
+</table>
+
+</body>
+</html>
