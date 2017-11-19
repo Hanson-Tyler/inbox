@@ -17,12 +17,13 @@ app.get('/getPerson/:id', function(request, response) {
 
     const client = new pg.Client(connectionString);
     client.connect();
-    client.query('SELECT * FROM messages WHERE sender = ' + request.params.id + ';', (err, res) => {
+    client.query('SELECT * FROM messages;', (err, res) => {
         if (err) 
           throw err;
         for (let row of res.rows) {
         console.log(JSON.stringify(row));
         }
+        console.log(request.params.id);
    
 
         response.render('pages/messages', {"data": res.rows})
