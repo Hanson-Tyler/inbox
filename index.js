@@ -13,7 +13,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: "postgres://gudqbffhpdwnmx:2b1f8bb5a9e04fb53f09047dc0ff21a2c460ad5991b90fa1bdb7376db807dbfd@ec2-107-20-255-96.compute-1.amazonaws.com:5432/postgresql-asymmetrical-63190",
   ssl: true,
 });
 
