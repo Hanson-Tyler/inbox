@@ -4,8 +4,8 @@ var app = express();
 var pg = require("pg"); // This is the postgres database connection module.
 const { Client } = require('pg');
 
-//var connectionString = process.env.DATABASE_URL;
-var connectionString = "postgres://ta_user:ta_pass@localhost:5432/inbox";
+var connectionString = process.env.DATABASE_URL;
+//var connectionString = "postgres://ta_user:ta_pass@localhost:5432/inbox";
 
 
 app.set('port', (process.env.PORT || 5000));
