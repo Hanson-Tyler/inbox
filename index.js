@@ -25,9 +25,10 @@ app.get('/getPerson/:id', function(request, response) {
         console.log(JSON.stringify(row));
         }
    
-        client.end();
 
         response.render('pages/messages', {"data": res.rows})
+
+        client.end();
 });   
 });
 
