@@ -17,7 +17,7 @@ app.get('/getPerson/:id', function(request, response) {
 
     const client = new pg.Client(connectionString);
     client.connect();
-    client.query('SELECT * FROM messages;', (err, res) => {
+    client.query('SELECT * FROM messages WHERE sender = ' + request.params.id + ';', (err, res) => {
         if (err) 
           throw err;
         for (let row of res.rows) {
