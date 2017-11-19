@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+	table, th, td {
+   		border: 1px solid black;
+    	border-collapse: collapse;
+	}
+	th, td {
+    	padding: 5px;
+    	text-align: left;    
+	}
+</style>
+
+</head>
+<body >
+
+<table id="inboxMessages">
+	<tr>
+		<th>Sender:</th>
+		<th>Recipient:</th>
+		<th>Subject:</th>
+		<th>Message:</th>
+		<th>Time Sent:</th>
+	</tr>
+
+	<% for (var i = 0; i < data.length; i++) { %>
+    <tr>
+      <td><%= data[i].sender %></td>
+      <td><%= data[i].recipient %></td>
+      <td><%= data[i].subject %></td>
+      <td><%= data[i].message %></td>
+      <td><%= data[i].senddate %></td>
+    </tr>    
+  <% } %>
+</table>
+
+</body>
+</html>
