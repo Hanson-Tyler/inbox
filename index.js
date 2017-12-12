@@ -11,10 +11,10 @@ var connectionString = process.env.DATABASE_URL;
 //var connectionString = "postgres://ta_user:ta_pass@localhost:5432/inbox";
 
 app.set('port', (process.env.PORT || 5000));
+ 
+app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser());
-
-app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
